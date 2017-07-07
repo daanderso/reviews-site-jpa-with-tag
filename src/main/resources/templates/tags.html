@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Tags</title>
+</head>
+<body>
+<p><a th:each="tag: ${tagsAsCollection}"><div th:text="${tag.name}" ></div></a></p>
+</body>
+</html>

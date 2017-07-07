@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dereks Movie Reviews</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles2.css"/>
+</head>
+<body>
+    <header>
+      <div class="header-txt">
+        <h1>Derek's Movie Reviews</h1>
+      </div>
+      <button class="button button1"><a href="./reviews">Movies Reviews Home</a></button>
+    </header>
+    <section id='main'>
+      <article>
+        <!-- <h1>Movie Reviews by Genre</h1> -->
+        <div class="banner">
+          <img src="/images/genrebanner.jpg" alt="Movie banner Icon" />
+        </div>
+          <div>
+            <a th:each="genre:${genreAsCollection}" th:href="@{/onegenre(id=${genre.id})}">
+          <div th:text="${genre.title}"></div></a>
+          </div>
+      </article> 
+      <nav>
+        <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+      </nav>
+      <aside>
+        <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+      </aside>
+    </section>
+    <footer>
+      <h3>Derek's Movie Reviews</h3>
+    </footer>
+</body>
+</html>
