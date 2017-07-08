@@ -1,9 +1,9 @@
 <!DOCTYPE html>
  <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Tags</title>
+<title>Tag List</title>
 </head>
 <body>
-<p><a th:each="tag: ${tagsAsCollection}"><div th:text="${tag.name}" ></div></a></p>
+<a th:each="tag: ${tagsAsCollection}" th:href="@{/tags(id=${tag.id})}"><div th:text="${tag.name}"></div></a>
 </body>
 </html>

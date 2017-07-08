@@ -87,10 +87,17 @@ public class Review {
 	public Set<Tag> getTags() {
 		return tags;
 	}
-	
-	@Override
-	public String toString() {
-		return "Review [tags=" + tags + "]";
+
+	//to remove a tag
+	public void remove(Tag toDelete) {
+		tags.remove(toDelete);	
 	}
+	
+	// to add a tag
+	public void add(Tag toAdd) {
+		tags.add(toAdd);
+	}
+	
+	
 
 }

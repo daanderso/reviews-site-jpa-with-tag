@@ -24,6 +24,23 @@
             <p th:text="'Date: ' + ${onereview.date}"></p>
             <p th:text="'Synopsis: ' + ${onereview.synopsis}"></p>
           </div>
+          
+    <form method="POST">	 	
+		<ul>
+			<li th:each="currentTag: ${onereview.tags}">
+				<a th:text="${currentTag.name}" th:href="@{/onereview(id=${currentTag.id})}" ></a>
+				<button th:formaction="@{/deleteTag}" name="id" th:value="${currentTag.id}">Delete Tag</button>
+			</li>
+		</ul>
+	</form>
+	
+	<form method="POST">
+		<input name="id" type="hidden" th:value="${onereview.id}" />
+		<label>Add Tag: <input type="text" name="name" /></label>
+		<br/>
+		<button th:formaction="@{/addTag}"> Add Tag </button>	
+	</form>	
+          
       </article> 
         <nav>
           <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />

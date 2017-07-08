@@ -19,8 +19,8 @@ public class Tag {
 	private String name;
 	
 //	//adding for mapping
-//	@ManyToMany(mappedBy="tags")
-//	private Set<Review> reviews;
+	@ManyToMany(mappedBy="tags")
+	private Set<Review> reviews;
 	
 	
 
@@ -42,9 +42,9 @@ public class Tag {
 		return name;
 	}
 
-//	public Set<Review> getReviews() {
-//		return reviews;
-//	}
+	public Set<Review> getReviews() {
+		return reviews;
+	}
 	
 	@Override
 	public String toString() {
