@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>One tag</title>
+<title>Derek's Movie Reviews</title>
+<link rel="stylesheet" type="text/css" href="/css/styles2.css"/>
 </head>
 <body>
-   <div>
-     <a th:each="tag: ${onetag.reviews}" th:href="@{/onereview/(id=${tag.id})}"><div th:text="${tag.movieTitle}" ></div></a>
-    </div>
+	<header>
+      	<div class="header-txt">
+        	<h1>Derek's Movie Reviews</h1>
+      	</div>
+      <button class="button button1"><a href="/reviews">Movies Reviews Home</a></button>
+      <button class="button button1"><a href="/genreList">Movies By Genre</a></button>
+    </header>
+    <section id='main'>
+    	<article>
+    		<div class="banner">
+          		<img src="/images/moviebytag.jpg" alt="Movie banner Icon" />
+        	</div> 
+   			<div>
+     			<a th:each="tag: ${onetag.reviews}" th:href="@{/onereview/(id=${tag.id})}"><div th:text="${tag.movieTitle}" ></div></a>
+    		</div>
+		</article>
+    	<nav>
+        	<img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+    	</nav>
+    	<aside>
+			<img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+    	</aside>
+  	</section>
+  <footer>
+    <h3>Derek's Movie Reviews</h3>
+  </footer>
 </body>
 </html>

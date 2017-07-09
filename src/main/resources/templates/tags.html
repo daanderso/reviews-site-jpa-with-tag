@@ -14,6 +14,9 @@
     </header>
     <section id='main'>
     	<article>
+    	<div class="banner">
+          <img src="/images/taglist.jpg" alt="Movie banner Icon" />
+        </div> 
 			<div>
 				<a th:each="tag: ${tagsAsCollection}" th:href="@{/onetag(id=${tag.id})}"><div th:text="${tag.name}"></div></a>
 			</div>
