@@ -27,6 +27,7 @@
           
     <form method="POST">	 	
 		<ul>
+    <input type="hidden" name="reviewId" th:value="${onereview.id}" />
 			<li th:each="currentTag: ${onereview.tags}">
 				<a th:text="${currentTag.name}" th:href="@{/onereview(id=${currentTag.id})}" ></a>
 				<button th:formaction="@{/deleteTag}" name="id" th:value="${currentTag.id}">Delete Tag</button>
