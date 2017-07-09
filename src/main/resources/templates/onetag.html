@@ -4,6 +4,8 @@
 <title>One tag</title>
 </head>
 <body>
-
+   <div>
+     <a th:each="tag: ${onetag.reviews}" th:href="@{/onereview/(id=${tag.id})}"><div th:text="${tag.movieTitle}" ></div></a>
+    </div>
 </body>
 </html>

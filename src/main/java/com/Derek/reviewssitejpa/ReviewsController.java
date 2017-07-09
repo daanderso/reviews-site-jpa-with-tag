@@ -51,11 +51,11 @@ public class ReviewsController {
 		return "tags";
 	}
 	
-//	@RequestMapping("/onetag")
-//	public String fetchOneTag(@RequestParam(value = "id") Long id, Model model) {
-//		model.addAttribute("onetag", tagRepo.findOne(id));
-//		return "onetag";
-//	}
+	@RequestMapping("/onetag")
+	public String fetchOneTag(@RequestParam(value = "id") Long id, Model model) {
+		model.addAttribute("onetag", tagRepo.findOne(id));
+		return "onetag";
+	}
 	
 	//delete tag
 	@RequestMapping("/deleteTag")
