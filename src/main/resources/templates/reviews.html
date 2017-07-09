@@ -11,6 +11,7 @@
       <h1>Derek's Movie Reviews</h1>
   </div>
     <button class="button button1"><a href="./genreList">Movies by Genre</a></button>
+    <button class="button button1"><a href="./tags">Movies by Tag</a></button>
   </header>
   <section id='main'>
     <article>
@@ -21,12 +22,6 @@
         <div class="reviewtxt">
           <a th:each="review: ${reviewsAsCollection}" th:href="@{http://localhost:8080/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
         </div>
-    
-    
-    
-    
-    
-    
     </article>
     <nav>
         <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
